@@ -18,7 +18,14 @@ st.set_page_config(
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
-nlp = spacy.load("en_core_web_sm")
+import spacy
+from spacy.cli import download
+
+try:
+    nlp = spacy.load("en_core_web_sm")
+except:
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
 
 # -------------------- STANDARD SME TEMPLATES --------------------
 STANDARD_CLAUSES = {
