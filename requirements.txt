@@ -1,8 +1,11 @@
-streamlit
+streamlit==1.31.1
 openai==0.28.1
-spacy==3.7.2
-langdetect
-pypdf
 python-dotenv
+pypdf
+langdetect
+
+numpy==1.26.4
+spacy==3.7.2
+thinc==8.2.2
 
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
